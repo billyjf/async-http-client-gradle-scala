@@ -18,16 +18,7 @@ import com.ning.http.client.AsyncHttpClient.BoundRequestBuilder
 I'm trying to mock `BoundRequestBuilder` in another repo but cannot as it cannot be imported from a Scala source file in a Gradle Scala repo.
 
 ### Steps to Reproduce (for bugs)
-Successful Java Import via Travis CI: 
-
-Unsuccessful Scala Import via Travis CI: 
-
-GitHub Repo for Reproduction via `./gradlew build`: 
-
-### Your Environment
-Experienced the bug on mac os and Travis CI pretty consistently.
-
-_ Build scan URL: 
+Can reproduce by uncommenting import in Scala source and running `./gradlew build`.
 
 #### Fails on SBT 
 
@@ -37,3 +28,8 @@ Failing Travis-CI Build: https://www.travis-ci.org/billyjf/async-http-client-sbt
 
 With:
 ```[error] /home/travis/build/billyjf/async-http-client-sbt-scala/src/main/scala/NingAsyncHttpClientBoundRequestBuilderFailsToResolve.scala:1:8: value BoundRequestBuilder is not a member of object com.ning.http.client.AsyncHttpClient```
+
+### Your Environment
+Experienced the bug on mac os and Travis CI pretty consistently.
+
+_ Build scan URL: 
